@@ -1,3 +1,5 @@
+import { useState } from 'react' 
+
 function Creature(props) {
     const style = {
         position: 'absolute',
@@ -6,6 +8,9 @@ function Creature(props) {
         textAlign: 'center',
         imageRendering: 'pixelated'
     };
+
+    const [isAwake, setAwake] = useState(false);
+
 
     return (
         <div style={style}>
