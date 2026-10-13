@@ -18,7 +18,7 @@ function Creature(props) {
 
     function handleClick() {
         setAwake(!isAwake)
-        if (isAwake) {
+        if (!isAwake) {
             setPosX(Math.floor(Math.random() * 750))
             setPosY(Math.floor(Math.random() * 750))
         }
@@ -26,7 +26,7 @@ function Creature(props) {
 
     return (
         <div style={style} onClick = { () => handleClick()}>
-            {isAwake ? <img src={props.sleepImageUrl} alt={props.name} width="120" /> : <img src={props.awakeImageUrl} alt={props.name} width="120"></img>}
+            {isAwake ? <img src={props.awakeImageUrl} alt={props.name} width="120" /> : <img src={props.sleepImageUrl} alt={props.name} width="120"></img>}
             <p>{props.name}, age {props.age}</p>
         </div>
     );
