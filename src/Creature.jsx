@@ -11,6 +11,9 @@ function Creature(props) {
 
     const [isAwake, setAwake] = useState(false);
 
+    const [posX, setPosX] = useState(props.x);
+    const [posY, setPosY] = useState(props.y);
+
     return (
         <div style={style} onClick = { () => setAwake(!isAwake)}>
             {isAwake ? <img src={props.sleepImageUrl} alt={props.name} width="120" /> : <img src={props.awakeImageUrl} alt={props.name} width="120"></img>}
